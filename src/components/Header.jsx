@@ -1,11 +1,16 @@
 import React from "react";
-import JokeDisplay from "./JokeDisplay";
+import { Link } from 'react-router-dom';
+import { Jumbotron } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 
 function Header(){
   return (
     <div>
-      <h1>Joke</h1>
+      <Jumbotron>
+        <h1>Humorland</h1>
+        <Link to="/"><Button>Home</Button></Link> | <Link to="/jokes"><Button>Chuck Norris</Button></Link> | <Link to="/quotes"><Button>Ron Swanson</Button></Link>
+      </Jumbotron>
     </div>
   );
 }

@@ -26,9 +26,7 @@ const selectedJoke = (state = defaultState, action) => {
         fixedContent: action.content.replace(/&quot;/g, '"'),
         jokeId: action.jokeId
     };
-    // newState = Object.assign({}, state, {
-    //   [action.jokeId]: newJoke
-    // });
+
     return newJoke;
       default:
         return state;

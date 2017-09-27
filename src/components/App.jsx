@@ -1,20 +1,20 @@
 import React from "react";
 import Header from "./Header";
 import JokeDisplay from "./JokeDisplay";
-import Background from "./../images/chuck.jpg";
+import QuoteDisplay from "./QuoteDisplay";
+import Home from "./Home";
+import { Switch, Route } from 'react-router-dom';
 
 function App(){
-  var backgroundStyle = {
-    backgroundImage: "url(" + Background + ")",
-    height: '600',
-    color: 'orange',
-    backgroundRepeat: "no-repeat"
-  }
 
   return (
-    <div style={backgroundStyle}>
+    <div>
       <Header />
-      <JokeDisplay />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/jokes" component={JokeDisplay} />
+        <Route path="/quotes" component={QuoteDisplay} />
+      </Switch>
     </div>
   );
 }
